@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoodMap</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header class="app-header">
+        <p id="dayGreeting"
+            style="font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px;">
+        </p>
+        <h1>MoodMap</h1>
+        <span class="subtitle">Log your first mood to see patterns</span>
+    </header>
+
+    <main class="app-main">
+        <section class="card mood-input">
+            <h2>Today's Mood</h2>
+
+            <div class="form-group">
+                <label>How do you feel?</label>
+                <div class="mood-grid" id="moodGrid">
+                    <div class="mood-item" data-mood="Happy">😊<span>Happy</span></div>
+                    <div class="mood-item" data-mood="Neutral">😐<span>Neutral</span></div>
+                    <div class="mood-item" data-mood="Sad">😔<span>Sad</span></div>
+                    <div class="mood-item" data-mood="Angry">😡<span>Angry</span></div>
+                    <div class="mood-item" data-mood="Tired">😴<span>Tired</span></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Intensity: <span id="intensityVal">5</span>/10</label>
+                <input type="range" id="moodIntensity" min="1" max="10" value="5" class="slider">
+            </div>
+
+            <div class="form-group">
+                <label>Notes</label>
+                <textarea id="moodNote" placeholder="What influenced your mood today?"></textarea>
+            </div>
+
+            <button id="saveBtn" class="primary-btn">Save Entry</button>
+        </section>
+        <section class="card insight-card" id="aiInsight">
+            <div class="insight-badge">Personal AI Forecast</div>
+            <div id="forecastContent">
+                <p class="muted">Log <span id="entriesNeeded">5</span> more entries to unlock your vibe forecast.</p>
+            </div>
+        </section>
+        <section class="card chart-container">
+            <section class="card chart-card">
+                <h2>Mood Trends</h2>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-range="all">All Time</button>
+                    <button class="filter-btn" data-range="7">7 Days</button>
+                    <button class="filter-btn" data-range="30">30 Days</button>
+                </div>
+
+                <div class="chart-wrapper">
+                    <canvas id="moodChart"></canvas>
+                </div>
+            </section>
+            <section class="card mood-history">
+                <div class="history-header">
+                    <h2>Recent Entries</h2>
+                    <button id="clearData" class="text-btn">Clear All</button>
+                </div>
+                <div id="historyList">
+                    <p class="muted">No entries yet</p>
+                </div>
+            </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
