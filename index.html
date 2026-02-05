@@ -5,6 +5,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MoodMap</title>
+    <meta name="title" content="MoodMap — Your Emotional North Star">
+    <meta name="description"
+        content="A data-driven mood tracker that uses AI to forecast your emotional patterns and provides actionable mental health insights.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://moodymap.netlify.app/">
+    <meta property="og:title" content="MoodMap — Your Emotional North Star">
+    <meta property="og:description"
+        content="Analyze your vibes, unlock AI forecasts, and track your consistency with a beautiful dark-mode dashboard.">
+    <meta property="og:image" content="./assets/logo.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://moodymap.netlify.app/">
+    <meta property="twitter:title" content="MoodMap — Your Emotional North Star">
+    <meta property="twitter:description"
+        content="Analyze your vibes, unlock AI forecasts, and track your consistency with a beautiful dark-mode dashboard.">
+    <meta property="twitter:image" content="./assets/logo.png">
+
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MoodMap">
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -35,7 +58,7 @@
 
             <div class="form-group">
                 <label>Intensity: <span id="intensityVal">5</span>/10</label>
-                <input type="range" id="moodIntensity" min="1" max="10" value="5" class="slider">
+                <input type="range" id="moodIntensity" min="1" max="10" value="5" class="slider" aria-label="range">
             </div>
 
             <div class="form-group">
@@ -73,6 +96,9 @@
                     <p class="muted">No entries yet</p>
                 </div>
             </section>
+            <a href="https://nakshhh.netlify.app" target="_blank" class="portfolio-btn">
+        📍 The Creator's Map
+    </a>
     </main>
 
     <script src="app.js"></script>

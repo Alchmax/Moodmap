@@ -451,3 +451,17 @@ select:focus, textarea:focus {
   /* Let's make the badge glow too */
   box-shadow: 0 0 10px var(--accent);
 }
+
+.portfolio-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #000; /* Change this per project! */
+    color: #fff;
+    border: 2px solid #333;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    z-index: 1000;
+  }
